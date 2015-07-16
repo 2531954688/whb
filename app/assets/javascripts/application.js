@@ -51,7 +51,26 @@ $(function() {
         layer.find('.title').text(title);
         layer.addClass('showSelect');
     });
+
+
+    $(".music-trigger").click(function(document){
+           if($(this).hasClass("play")){
+              $('#pause-btn').click();
+              $(this).removeClass("play icon-rotate").addClass("pause");
+           }
+           else
+           {
+               $('#play-btn').click();
+               $(this).removeClass("pause").addClass("play icon-rotate");
+           }
+        })
+
+    
   }
+
+
+
+
 
   $(document).ready(ready);
   $(document).on('page:load', ready);
