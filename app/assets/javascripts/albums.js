@@ -63,6 +63,25 @@ $(function() {
       });
     });
 
+
+    $(".delPhoto").on('click', function(e){
+      e.stopPropagation();
+      if(confirm("delete this photo ?"))
+      {
+        $(this).parent().hide();
+      }
+    });
+
+    $(".modifyTitle").on('click',function(){
+        alert($(".albumTitle").val());
+    });
+
+    $(".resetTitle").on('click',function(){
+      
+
+    });
+
+
     //createjs.Sound.registerSound("/musics/shenshi.m4a", "");
   }
 
